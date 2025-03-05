@@ -1,0 +1,561 @@
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+@font-face {
+	font-family: 'Segoe Print';
+	src: url(font/segoeprint.ttf);
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	background-image: url(image/paper_texture.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.container {
+	max-width: 1670px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/*----------------------Header----------------------*/
+.header {
+	position: fixed;
+	overflow: hidden; /* Обрезаем лишние края */
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	transition: all 0.3s ease;
+}
+
+.header.fixed {
+	position: fixed;
+	transform: translateY(-140px);
+}
+
+.header::before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	width: 110%; /* Делаем шире, чтобы фон покрывал весь header */
+	height: 110%;
+	background-image: url(image/header.png);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	z-index: -1; /* Уводим фон назад */
+}
+
+.container__header {
+	max-width: 1624px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.navigation {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -15px;
+}
+
+.header__nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.header__nav li {
+	margin-right: 30px;
+}
+
+.header__nav li:last-child {
+	margin-right: 0;
+}
+
+.header__nav a {
+	font-family: 'Segoe Print';
+	font-weight: 400;
+	color: #000000;
+	text-decoration: none;
+}
+
+p {
+	font-family: 'Segoe Print';
+}
+
+.logo {
+	width: 78px;
+	margin-right: 42px;
+}
+
+ul {
+	font-size: 36px;
+}
+
+/*----------------------Home-Wrapper----------------------*/
+
+.big__logo {
+	width: 100%;
+	margin-top: 3.7%;
+}
+
+/*----------------------Welcome-Wrapper----------------------*/
+
+.welcome__wrapper {
+	position: relative;
+	z-index: 1;
+	background: url('image/paper_texture.jpg') no-repeat center/cover;
+}
+
+.container__welcome {
+	padding: 0;
+	max-width: 1670px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-end; /* Прижимаем текст к правой стороне */
+	align-items: center;
+	min-height: 100vh;
+}
+
+.text__wrapper {
+	max-width: 1034px;
+	text-align: right;
+}
+
+.button__container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	justify-content: flex-end;
+}
+
+.button__tickets {
+	width: 519px; /* Ширина кнопки */
+	height: 100%; /* Высота кнопки */
+}
+
+.tickets {
+	position: absolute;
+	right: 60px;
+	top: 31%;
+	transform: translateY(-50%);
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.coliseum {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	max-width: 50%;
+}
+
+.text__wrapper h1 {
+	font-family: 'Segoe Print';
+	font-size: 48px;
+	margin: 0;
+}
+
+.text__wrapper p {
+	font-size: 40px;
+	padding-top: 43px;
+	padding-bottom: 43px;
+	margin: 0;
+}
+
+.text__wrapper a {
+	font-family: 'Segoe Print';
+	font-size: 40px;
+	text-transform: uppercase;
+	color: #000000;
+	text-decoration: none;
+}
+
+/*----------------------About-Wrapper----------------------*/
+
+.about__wrapper1 {
+	background: url('image/paper_texture.jpg') no-repeat top/cover;
+}
+
+.about_wrapper {
+	background: url('image/Frame 2 (2).png') no-repeat top/cover;
+	padding: 40px;
+	margin-top: -160px; /* Поднимаем блок вверх */
+	position: relative;
+	z-index: 2; /* Делаем этот блок выше предыдущего */
+	border-radius: 10px; /* Закругление краёв, если нужно */
+}
+
+.text__about__wrapper {
+	margin-top: 220px;
+	margin-bottom: 400px;
+}
+
+.text__about__wrapper h1 {
+	text-align: center;
+	font-family: 'Segoe Print';
+	font-size: 48px;
+	padding: 0;
+	margin-bottom: 56px;
+}
+
+.text__about__wrapper p {
+	font-size: 36px;
+	max-width: 1255px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.text__about__wrapper ul {
+	margin: 0;
+	margin-left: 50px;
+}
+
+.text__about__wrapper li {
+	font-family: 'Segoe Print';
+}
+
+/*----------------------Activities-Wrapper----------------------*/
+
+.activities__wrapper {
+	background: url('image/paper_texture.jpg') no-repeat top/cover;
+	margin-top: -22px;
+	width: 100%;
+	height: 100%;
+}
+
+.text__activities__wrapper {
+	padding-top: 140px;
+}
+
+.text__activities__wrapper h1 {
+	text-align: center;
+	font-family: 'Segoe Print';
+	font-size: 48px;
+}
+
+.text__activities__wrapper p {
+	font-size: 40px;
+	max-width: 1675px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.text__activities__wrapper ul {
+	margin: 0;
+	margin-left: 50px;
+}
+
+.text__activities__wrapper li {
+	font-family: 'Segoe Print';
+}
+
+/*----------------------Activities-Wrapper----------------------*/
+
+.ticket__wrapper2 {
+	background: url('image/paper_texture.jpg') no-repeat top/cover;
+}
+
+.ticket__wrapper {
+	background: url('image/paper_texture.jpg') no-repeat center/cover;
+}
+
+.ticket__wrapper img {
+	max-width: 870px;
+	width: 100%;
+	height: auto;
+	left: 0;
+	bottom: 0;
+}
+
+.text_ticket__wrapper {
+	margin-right: 100px;
+	padding-top: 250px;
+	max-width: 690px;
+	width: 100%;
+	margin-left: auto;
+	z-index: 2;
+}
+
+.text_ticket__wrapper h1 {
+	font-size: 48px;
+	font-family: 'Segoe Print';
+	text-align: center;
+	margin: 0;
+	margin-bottom: 50px;
+}
+
+.text_ticket__wrapper p {
+	font-size: 40px;
+}
+
+.text_ticket__wrapper input[type='text'] {
+	max-width: 690px;
+	width: 60%;
+	margin-bottom: 34px;
+}
+
+.text_ticket__wrapper input {
+	max-width: 690px;
+	width: 100%;
+	font-size: 16px;
+	font-family: 'Segoe Print';
+	margin-bottom: 70px;
+	padding: 18px 26px;
+	border-radius: 15px;
+	border: 2px solid #b6b6b6;
+	outline: none;
+	transition: all 0.3s ease-in-out;
+	background-color: #ebebeb;
+}
+
+.text_ticket__wrapper input::placeholder {
+	font-size: 24px;
+	font-family: 'Segoe Print';
+}
+
+.link {
+	display: flex;
+	align-items: center;
+}
+
+.link a {
+	font-size: 32px;
+	font-family: 'Segoe Print';
+	color: #000000;
+	text-decoration: none;
+	margin-right: 30px;
+}
+
+.link button {
+	width: 65px;
+	height: 65px;
+	padding: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	margin-right: 13px;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+}
+
+.link button:hover {
+	background-color: #e4e4e4;
+}
+
+.link button:last-child {
+	margin-right: 0;
+}
+
+.link button img {
+	width: 100%;
+	height: auto;
+}
+
+.ideal {
+	width: 35px;
+}
+
+#message {
+	height: 20px; /* Фиксируем высоту, чтобы не сдвигалось */
+	visibility: hidden; /* Скрываем текст, но оставляем место */
+	color: green;
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.piramide {
+	margin-top: -600px;
+	z-index: -1;
+}
+
+/*----------------------Footer----------------------*/
+
+.footer__wrapper {
+	background: url('image/paper_texture.jpg') no-repeat top/cover;
+}
+
+.footer {
+	background: url(image/footer.png) no-repeat center/cover;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.footer .container {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-text {
+	padding-top: 5%;
+	padding-bottom: 1%;
+}
+
+.text1 {
+	font-size: 32px;
+}
+
+.text2 {
+	font-size: 24px;
+}
+
+/*----------------------Media----------------------*/
+
+@media (max-width: 1800px) {
+	.container__header {
+		width: 85%;
+	}
+
+	.container {
+		width: 90%;
+	}
+
+	.container__welcome {
+		width: 95%;
+	}
+
+	.text__wrapper h1 {
+		font-size: 39px;
+	}
+
+	.text__wrapper p {
+		font-size: 32px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.button__tickets {
+		width: 419px;
+	}
+
+	.text__wrapper a {
+		font-size: 32px;
+	}
+
+	.text__about__wrapper {
+		margin-bottom: 300px;
+	}
+
+	.text__about__wrapper h1 {
+		font-size: 39px;
+	}
+
+	.text__about__wrapper p {
+		font-size: 32px;
+		width: 80%;
+	}
+
+	.text__about__wrapper ul {
+		font-size: 32px;
+	}
+
+	.text__activities__wrapper h1 {
+		font-size: 39px;
+	}
+
+	.text__activities__wrapper p {
+		font-size: 32px;
+	}
+
+	.text__activities__wrapper ul {
+		font-size: 32px;
+	}
+
+	.text_ticket__wrapper {
+		z-index: 10;
+		padding-top: 150px;
+	}
+
+	.text_ticket__wrapper p {
+		font-size: 30px;
+	}
+
+	.text_ticket__wrapper input[type='text'] {
+		max-width: 490px;
+		width: 60%;
+		margin-bottom: 25px;
+	}
+
+	.text_ticket__wrapper input {
+		max-width: 690px;
+		width: 100%;
+		font-size: 16px;
+		font-family: 'Segoe Print';
+		margin-bottom: 30px;
+		padding: 15px 23px;
+		border-radius: 15px;
+		border: 2px solid #b6b6b6;
+		outline: none;
+		transition: all 0.3s ease-in-out;
+		background-color: #ebebeb;
+	}
+
+	.text_ticket__wrapper input::placeholder {
+		font-size: 20px;
+		font-family: 'Segoe Print';
+	}
+
+	.text_ticket__wrapper h1 {
+		font-size: 39px;
+	}
+
+	.link a {
+		font-size: 30px;
+	}
+
+	.ticket__wrapper img {
+		width: 600px;
+	}
+
+	.piramide {
+		width: 100px;
+	}
+
+	.text1 {
+		font-size: 28px;
+	}
+
+	.text2 {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 1600px) {
+	.logo {
+		width: 68px;
+		margin-right: 32px;
+	}
+
+	ul {
+		font-size: 30px;
+	}
+}
